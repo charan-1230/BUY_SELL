@@ -79,13 +79,13 @@ BUY_SELL/
 ### Prerequisites
 - Node.js (v14 or higher)
 - MongoDB connection string
-- npm or yarn package manager
+- npm package manager
 
 ### Setup Instructions
 
 1. **Download the Project**
-   Download the Zip file and Extract it.
-   (you may clone the repo instead)
+
+   - Download the Zip file and Extract it. (you may clone the repo instead).
 
 2. **Install Dependencies**
    ```bash
