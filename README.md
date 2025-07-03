@@ -85,7 +85,7 @@ BUY_SELL/
 
 1. **Download the Project**
 
-   - Download the Zip file and Extract it. (you may clone the repo instead).
+   - Clone the repository.
 
 2. **Install Dependencies**
    ```bash
