@@ -45,15 +45,22 @@ The application implements secure authentication using JWT tokens and bcrypt pas
 - **Seller Information**: View seller contact details
 - **Security**: Password encryption and secure API endpoints
 
-## Tech Stack
-- **Frontend:** React.js with Tailwind CSS for styling
-- **Backend:** Express.js with Node.js
-- **Database:** MongoDB with Mongoose ODM
-- **Authentication:** JWT (JSON Web Tokens)
-- **Security:** bcrypt.js for password hashing
-- **HTTP Client:** Axios for API calls
-- **Routing:** React Router DOM
-- **Icons:** React Icons library
+## Architecture & Tech Stack
+
+### Frontend (React.js + Vite)
+- **Framework**: React 18 with Vite for development
+- **Styling**: Tailwind CSS 4.0 with custom components
+- **Routing**: React Router DOM for navigation
+- **HTTP Client**: Axios for API communication
+- **Icons**: React Icons library
+- **Authentication**: JWT token-based with localStorage
+
+### Backend (Node.js + Express)
+- **Runtime**: Node.js with Express.js framework
+- **Database**: MongoDB with Mongoose ODM
+- **Authentication**: JWT tokens + bcrypt for password hashing
+- **Middleware**: Custom authentication middleware
+- **CORS**: Configured for cross-origin requests
 
 ## Project Structure
 ```
