@@ -6,7 +6,7 @@ A full-stack web application designed for the IIIT Hyderabad community to buy an
 
 Buy-Sell @ IIITH is a comprehensive marketplace application that enables users to:
 - Register and authenticate using IIIT email addresses
-<!-- - List items for sale with detailed descriptions and categories -->
+- List items for sale with detailed descriptions and categories
 - Search and filter items by name and category
 - Add items to cart and manage purchases
 - View transaction history and manage deliveries
@@ -23,7 +23,7 @@ The application implements secure authentication using JWT tokens and bcrypt pas
 - **Protected Routes**: Secure access to authenticated features
 
 ### Item Management
-<!-- - **Item Listing**: Sellers can add items with descriptions, prices, and categories -->
+- **Item Listing**: Sellers can add items with descriptions, prices, and categories
 - **Item Search**: Advanced search functionality by item name
 - **Category Filtering**: Filter items by multiple categories simultaneously
 - **Item Details**: Comprehensive item information including seller details

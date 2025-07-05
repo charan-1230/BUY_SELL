@@ -122,7 +122,7 @@ const SearchItems = () => {
                   <p className='text-gray-900 font-semibold'>Price: {item.price}</p>
                   <p className='text-gray-700'>Category: {item.category}</p>
                   <div className='mt-4'>
-                    <h3 className='text-lg font-semibold'>Seller Information</h3>
+                    <h3 className=' font-semibold text-lg italic'>Seller Information</h3>
                     <p className='text-gray-700'>Name: {item.sellerID.firstName} {item.sellerID.lastName}</p>
                     <p className='text-gray-700'>Email: {item.sellerID.email}</p>
                   </div>

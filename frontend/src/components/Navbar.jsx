@@ -24,6 +24,9 @@ const Navbar = ({handleLogout}) => {
             <Link to="/profile" className="menu-item">Profile</Link>
           </li>
           <li>
+            <Link to="/addItem" className="menu-item">Add Item</Link>
+          </li>
+          <li>
             <Link to="/SearchItems" className="menu-item">Search</Link>
           </li>
           <li>

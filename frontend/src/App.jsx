@@ -8,6 +8,7 @@ import History from './pages/History'
 import Deliver from './pages/Deliver'
 import Cart from './pages/Cart'
 import Item from './pages/Item'
+import AddItem from './pages/AddItem' 
 
 function App() {
 
@@ -19,6 +20,11 @@ function App() {
         <Route path="/profile" element={
           <ProtectRoute>
             <Profile />
+          </ProtectRoute>
+        } />
+        <Route path="/addItem" element={
+          <ProtectRoute>
+            <AddItem />
           </ProtectRoute>
         } />
         <Route path="/SearchItems" element={
