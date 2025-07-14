@@ -2,6 +2,10 @@
 
 A full-stack web application designed for the IIIT Hyderabad community to buy and sell items within the campus. This platform provides a secure and user-friendly marketplace for members of IIITH to trade items efficiently.
 
+## 🌐 Live Demo
+**Website**: [https://buy-sell-suvp.onrender.com](https://buy-sell-suvp.onrender.com)
+
+
 ## Description
 
 Buy-Sell @ IIITH is a comprehensive marketplace application that enables users to:
@@ -45,6 +49,13 @@ The application implements secure authentication using JWT tokens and bcrypt pas
 - **Seller Information**: View seller contact details
 - **Security**: Password encryption and secure API endpoints
 
+## Security Features
+- JWT-based authentication
+- Password hashing with bcrypt
+- Protected API routes
+- Input validation and sanitization
+- CORS configuration for secure cross-origin requests
+
 ## Architecture & Tech Stack
 
 ### Frontend (React.js + Vite)
@@ -81,14 +92,14 @@ BUY_SELL/
 └── README.md
 ```
 
-## Installation Guide
+## Installation Guide for Development Mode
 
 ### Prerequisites
 - Node.js (v14 or higher)
 - MongoDB connection string
 - npm package manager
 
-### Setup Instructions
+### Setup Instructions 
 
 1. **Download the Project**
 
@@ -106,7 +117,8 @@ BUY_SELL/
    ```
 
 3. **Environment Configuration**
-   - Update the `.env` file in the backend directory with your MongoDB URI and JWT secret
+   - Create `.env` file in `backend/` directory
+   - Add your MONGO_URI and JWT_SECRET (follow this names strictly).
    - Ensure proper environment variables are set
 
 4. **Start the Application**
@@ -124,9 +136,3 @@ BUY_SELL/
    - Frontend: `http://localhost:5173` (Vite default port)
    - Backend: `http://localhost:5000`
 
-## Security Features
-- JWT-based authentication
-- Password hashing with bcrypt
-- Protected API routes
-- Input validation and sanitization
-- CORS configuration for secure cross-origin requests
