@@ -24,7 +24,7 @@ const SearchItems = () => {
     const fetchItems = async () => {
       try {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        const response = await axios.get('http://localhost:5000/api/items', {
+        const response = await axios.get('/api/items', {
           headers: {
             Authorization: `Bearer ${token}`
           },

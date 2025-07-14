@@ -20,7 +20,7 @@ const Deliver = () => {
     const fetchOrders = async () => {
       try {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        const response = await axios.get('http://localhost:5000/api/orders/seller', {
+        const response = await axios.get('/api/orders/seller', {
           headers: {
             Authorization: `Bearer ${token}`
           },
@@ -43,7 +43,7 @@ const Deliver = () => {
   const handleCompleteTransaction = async (orderId) => {
     try {
       const token = JSON.parse(localStorage.getItem('user')).token;
-      const response = await axios.put('http://localhost:5000/api/orders/verify', { orderId, otp: otp[orderId] }, {
+      const response = await axios.put('/api/orders/verify', { orderId, otp: otp[orderId] }, {
         headers: {
           Authorization: `Bearer ${token}`
         },

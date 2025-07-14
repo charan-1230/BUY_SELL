@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from "dotenv";
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import path from 'path';
 
 import { connectDB } from './config/connect_database.js';
 
@@ -20,12 +21,21 @@ app.use(cors(
     }
 ));
 
+const __dirname = path.resolve();
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/users", userRoutes);
 app.use("/api/items", itemRoutes);
 app.use("/api/orders", orderRoutes);
+
+if(process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "../frontend/dist")));
+    app.get("*", (req, res) => {
+        res.sendFile(path.resolve(__dirname,"../frontend","dist", "index.html"));
+    });
+}
 
 app.listen(5000, () => {
     connectDB();

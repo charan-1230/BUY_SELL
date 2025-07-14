@@ -57,7 +57,7 @@ const Register = () => {
     setErr(null);
 
     // Call the register API here
-    await axios.post('http://localhost:5000/api/users/', {
+    await axios.post('/api/users/', {
       firstName,
       lastName,
       email,

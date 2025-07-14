@@ -20,7 +20,7 @@ const History = () => {
     const fetchOrders = async () => {
       try {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        const response = await axios.get('http://localhost:5000/api/orders/buyer', {
+        const response = await axios.get('/api/orders/buyer', {
           headers: {
             Authorization: `Bearer ${token}`
           },
@@ -41,7 +41,7 @@ const History = () => {
     const fetchsoldOrders = async () => {
       try {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        const response = await axios.get('http://localhost:5000/api/orders/seller', {
+        const response = await axios.get('/api/orders/seller', {
           headers: {
             Authorization: `Bearer ${token}`
           },

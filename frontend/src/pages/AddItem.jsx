@@ -56,7 +56,7 @@ const AddItem = () => {
 
     try {
       const token = JSON.parse(localStorage.getItem('user')).token;
-      const response = await axios.post('http://localhost:5000/api/items/add', {
+      const response = await axios.post('/api/items/add', {
         name: name.trim(),
         price: parseFloat(price),
         description: description.trim(),

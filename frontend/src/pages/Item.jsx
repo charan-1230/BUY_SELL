@@ -22,7 +22,7 @@ const Item = () => {
         const fetchItem = async () => {
             try {
                 const token = JSON.parse(localStorage.getItem('user')).token;
-                const response = await axios.get(`http://localhost:5000/api/items/${id}`, {
+                const response = await axios.get(`/api/items/${id}`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     },
@@ -42,7 +42,7 @@ const Item = () => {
     const handleAddToCart = async () => {
         try {
             const token = JSON.parse(localStorage.getItem('user')).token;
-            const response = await axios.post('http://localhost:5000/api/users/cart', { itemId: id }, {
+            const response = await axios.post('/api/users/cart', { itemId: id }, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 },

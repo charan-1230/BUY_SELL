@@ -30,7 +30,7 @@ const Profile = () => {
 
       try {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        const response = await axios.get('http://localhost:5000/api/users/profile', {
+        const response = await axios.get('/api/users/profile', {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -86,7 +86,7 @@ const Profile = () => {
     }
     setErr(null);
     const token = JSON.parse(localStorage.getItem('user')).token;
-    await axios.put('http://localhost:5000/api/users/update', {
+    await axios.put('/api/users/update', {
       firstName,
       lastName,
       age,

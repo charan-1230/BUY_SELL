@@ -21,7 +21,7 @@ const Cart = () => {
     const fetchCartItems = async () => {
       try {
         const token = JSON.parse(localStorage.getItem('user')).token;
-        const response = await axios.get('http://localhost:5000/api/users/getcart', {
+        const response = await axios.get('/api/users/getcart', {
           headers: {
             Authorization: `Bearer ${token}`
           },
@@ -44,7 +44,7 @@ const Cart = () => {
   const handleRemoveFromCart = async (itemId) => {
     try {
       const token = JSON.parse(localStorage.getItem('user')).token;
-      await axios.delete(`http://localhost:5000/api/users/cart/${itemId}`, {
+      await axios.delete(`/api/users/cart/${itemId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         },
@@ -64,7 +64,7 @@ const Cart = () => {
     try {
       const token = JSON.parse(localStorage.getItem('user')).token;
       const itemIds = cartItems.map(item => item._id);
-      const response = await axios.post('http://localhost:5000/api/orders/add', { items: itemIds }, {
+      const response = await axios.post('/api/orders/add', { items: itemIds }, {
         headers: {
           Authorization: `Bearer ${token}`
         },

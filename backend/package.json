@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "NODE_ENV=development nodemon server.js",
+    "build": "npm install && npm install --prefix ../frontend && npm run build --prefix ../frontend",
+    "start": "NODE_ENV=production node server.js"
   },
   "type": "module",
   "keywords": [],
