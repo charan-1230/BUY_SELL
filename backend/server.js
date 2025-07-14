@@ -37,7 +37,7 @@ if(process.env.NODE_ENV === "production") {
     });
 }
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
     connectDB();
-    console.log(`Connection Started at http://localhost:5000 `);
+    console.log(`Connection Started at http://localhost:${process.env.PORT || 5000}`);
 });
